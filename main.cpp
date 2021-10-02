@@ -33,5 +33,7 @@ int main(int argc, char *argv[])
     std::cout << "Counter is " << test.get_counter() << std::endl;
     test.inc_counter(17);
     std::cout << "Counter is " << test.get_counter() << std::endl;
+    test.null_counter();
+    std::cout << "Counter is " << test.get_counter() << std::endl;
     return a.exec();
 }
