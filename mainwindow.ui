@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>818</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <widget class="QStackedWidget" name="stackedMain">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>801</width>
+       <height>541</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="theory">
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Теоретическая справка</string>
+       </property>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>791</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="theory_menu">
+        <widget class="QPushButton" name="history_button">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>141</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <underline>true</underline>
+           <stylestrategy>PreferDefault</stylestrategy>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::DefaultContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Историческая справка</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="seebeck_button">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>111</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <underline>true</underline>
+           <stylestrategy>PreferDefault</stylestrategy>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::DefaultContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Эффект Зеебека</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="transformation_button">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>231</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <underline>true</underline>
+           <stylestrategy>PreferDefault</stylestrategy>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::DefaultContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Термоэлектрическое преобразование</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="assembl_button">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>261</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <underline>true</underline>
+           <stylestrategy>PreferDefault</stylestrategy>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::DefaultContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Термоэлектрические генераторные сборки</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="history">
+        <widget class="QTextBrowser" name="textBrowser">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>791</width>
+           <height>451</height>
+          </rect>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:12pt;&quot;&gt;Возникновение контактной разности потенциалов при соприкосновении двух разнородных проводников, открытое Алессандро Вольта в последнем десятилетии XVIII века, привлекло внимание многих физиков к процессам, протекающим в цепях разнородных материалов. Днем рождения термоэлектричества можно считать 14 декабря 1820 г. В этот день на заседании Берлинской академии наук академик Томас Иоганн Зеебек (рис. 1) впервые доложил о наблюдении им отклонения магнитной стрелки компаса вблизи замкнутой цепи из двух разнородных металлов, один спай которых нагревался (рис. 2). Томас Зеебек называл этот эффект «термомагнетизмом». Позже, в 1822 г., в докладах Прусской академии наук был опубликован научный труд Томаса Зеебека «К вопросу о магнитной поляризации некоторых материалов и руд, возникающей в условиях разности температур». В своих опытах Томас Зеебек использовал контакт двух различных материалов (конструктивно выполненных в виде проволоки, пластин и/или стержней) из различных металлов, в частности из меди, висмута и сурьмы. Суть явления, которое вошло впоследствии в физику под термином «эффект Зеебека» (рис. 2), состояла в том, что при замыкании концов цепи, состоящей из двух разнородных металлических материалов, спаи которых (обозначенные на рис. 2 m-p и n-o) находились при разных температурах, магнитная стрелка (а), помещенная вблизи такой цепи, поворачивалась так же, как и в присутствии магнитного материала. В результате Зеебек наблюдал возникновение магнитного поля, которое фиксировалось по отклонению магнитной стрелки. Угол и направление поворота магнитной стрелки зависели от значения разности температур на спаях цепи и сочетания материалов, из которых была составлена цепь. Эффективность термоэлектрического преобразования теплового потока в электрическую энергию для наилучшего сочетания значений термоэлектродвижущей силы (термоЭДС) рядов пар материалов, составленных самим первооткрывателем этого эффекта Томасом Зеебеком, могла достичь 2–3%, что значительно превосходило КПД паровых машин того времени. Неизвестно, каким путем пошло бы развитие энергетики, будь больше внимания уделено термоэлектричеству в те годы. Сегодня термоэлектричество наверстывает незаслуженное вековое забвение в энергетике. Это ускоренное движение началось совсем недавно — в 30‑е годы прошлого века благодаря работам А. Ф. Иоффе. Именно в эти годы была заложена основа развития современной термоэлектрической энергетики. Одним из первых выдающихся практических применений термоэлектрических полупроводниковых генераторов стал легендарный в тяжелые годы Великой Отечественной войны «Партизанский котелок» (ТГ-1, 1942 г.). Это устройство позволяло обеспечивать электрической энергией мощностью 2–4 Вт питание радиостанций партизанских отрядов и заменило труднодоступные и обладавшие в те времена малой емкостью гальванические батареи. Для получения электрической энергии было достаточно разности температур 250…300 °С над огнем костра при стабилизации температуры холодных спаев кипящей водой. Мировым термоэлектрическим сообществом общепризнан приоритет практического применения эффекта прямого преобразования тепловой энергии в электрическую за Советской Россией. Для упрощения понимания используемых в последующих разделах обозначений и сокращений в таблице 1 приводится их единый перечень.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="theory_back">
+         <property name="geometry">
+          <rect>
+           <x>642</x>
+           <y>460</y>
+           <width>131</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Вернуться к меню</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="seebeck_effect"/>
+       <widget class="QWidget" name="transformation"/>
+       <widget class="QWidget" name="assebl"/>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="about">
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>О программе</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="learning">
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Режим обучения</string>
+       </property>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>791</width>
+         <height>501</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="setup">
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Настройка теста</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="testSetupDone">
+         <property name="geometry">
+          <rect>
+           <x>680</x>
+           <y>460</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Далее</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="questions">
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Вопрос #x</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="questionsDone">
+         <property name="geometry">
+          <rect>
+           <x>680</x>
+           <y>460</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Проверить</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="stat">
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Результаты</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="statDone">
+         <property name="geometry">
+          <rect>
+           <x>680</x>
+           <y>460</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Начать заново</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="saveXLSX">
+         <property name="geometry">
+          <rect>
+           <x>542</x>
+           <y>460</y>
+           <width>111</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Сохранить в xlsx</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="modeling">
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Режим моделирования</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>331</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources/res.qrc">:/new/model/C:/Users/avk77/Documents/Lightshot/Screenshot_194.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="voltage">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>70</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Tcold">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>110</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Thot">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>150</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="couple1">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>230</y>
+         <width>151</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Выберите материал</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Сурьма</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Железо</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Молибден</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="couple2">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>270</y>
+         <width>151</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Выберите материал</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Сурьма</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Железо </string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Молибден</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="seebeck">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>310</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="dT">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>190</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>70</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ТермоЭДС, В</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>110</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Т хол, С</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>150</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Т гор, С</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>190</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>dT, С</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>230</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Металл 1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>270</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Металл 2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>310</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Коэфф. Зеебека</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="voltage_label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>120</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Tcold_label">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>160</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Thot_label">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>250</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dT_label">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>220</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="couple2_label">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>290</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="couple1_label">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>290</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>818</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="actLearning"/>
+    <addaction name="actModeling"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="actTheory"/>
+    <addaction name="actAbout"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actLearning">
+   <property name="text">
+    <string>Режим обучения</string>
+   </property>
+  </action>
+  <action name="actModeling">
+   <property name="text">
+    <string>Режим моделирования</string>
+   </property>
+  </action>
+  <action name="actTheory">
+   <property name="text">
+    <string>Теоретическая справка</string>
+   </property>
+  </action>
+  <action name="actAbout">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
