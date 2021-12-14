@@ -357,3 +357,24 @@ void MainWindow::hideTemp()
     else
         ui->dT->setEnabled(true);
 }
+
+
+void MainWindow::on_actLearning_triggered()
+{
+    ui->stackedMain->setCurrentWidget(ui->learning);
+}
+
+void MainWindow::on_actModeling_triggered()
+{
+    ui->stackedMain->setCurrentWidget(ui->modeling);
+}
+
+void MainWindow::on_actTheory_triggered()
+{
+    ui->stackedMain->setCurrentWidget(ui->theory);
+}
+
+void MainWindow::on_actAbout_triggered()
+{
+    ui->stackedMain->setCurrentWidget(ui->about);
+}
