@@ -62,6 +62,14 @@ private slots:
     void calculateTemp();
 
     void hideTemp();
+    
+    void on_actTheory_triggered();
+
+    void on_actLearning_triggered();
+
+    void on_actModeling_triggered();
+
+    void on_actAbout_triggered();
 
 private:
     Ui::MainWindow *ui;
