@@ -108,3 +108,224 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+void MainWindow::set(QString obj, float value)
+{
+    if(obj == "voltage")
+        ui->voltage->setText(QString::number(value));
+    if(obj == "current")
+        ui->current->setText(QString::number(value));
+    if(obj == "power")
+        ui->power->setText(QString::number(value));
+    if(obj == "rn")
+        ui->rn->setText(QString::number(value));
+    if(obj == "Tcold")
+        ui->Tcold->setText(QString::number(value));
+    if(obj == "Thot")
+        ui->Thot->setText(QString::number(value));
+    if(obj == "dT")
+        ui->dT->setText(QString::number(value));
+    if(obj == "alpha")
+        ui->alpha->setText(QString::number(value));
+    if(obj == "rvn")
+        ui->rvn->setText(QString::number(value));
+}
+
+
+
+float MainWindow::get(QString obj)
+{
+    if(obj == "voltage")
+        return ui->voltage->text().toFloat();
+    if(obj == "current")
+        return ui->current->text().toFloat();
+    if(obj == "power")
+        return ui->power->text().toFloat();
+    if(obj == "rn")
+        return ui->rn->text().toFloat();
+    if(obj == "Tcold")
+        return ui->Tcold->text().toFloat();
+    if(obj == "Thot")
+        return ui->Thot->text().toFloat();
+    if(obj == "dT")
+        return ui->dT->text().toFloat();
+    if(obj == "alpha")
+        return ui->alpha->text().toFloat();
+    if(obj == "rvn")
+        return ui->rvn->text().toFloat();
+}
+
+void MainWindow::calculating()
+{
+    if(ui->find_param->currentIndex() == 1) calculateVoltage();
+    if(ui->find_param->currentIndex() == 2) calculateCurrent();
+    if(ui->find_param->currentIndex() == 3) calculatePower();
+    if(ui->find_param->currentIndex() == 4) calculateRn();
+    if(ui->find_param->currentIndex() == 5) calculateT();
+    if(ui->find_param->currentIndex() == 6) calculateAlpha();
+    if(ui->find_param->currentIndex() == 7) calculateRvn();
+}
+
+void MainWindow::checkSt()
+{
+    if(ui->find_param->currentIndex() == 0 || ui->param_mode->currentIndex() == 0)
+    {
+        ui->voltage->setEnabled(false);
+        ui->current->setEnabled(false);
+        ui->power->setEnabled(false);
+        ui->rn->setEnabled(false);
+        ui->dT_button->setEnabled(false);
+        ui->Tcold_button->setEnabled(false);
+        ui->Thot_button->setEnabled(false);
+        ui->dT->setEnabled(false);
+        ui->Tcold->setEnabled(false);
+        ui->Thot->setEnabled(false);
+        ui->alpha->setEnabled(false);
+        ui->rvn->setEnabled(false);
+        ui->couple1->setEnabled(false);
+        ui->couple2->setEnabled(false);
+        ui->statusbar->showMessage("Задайте настройки",5000);
+    }
+    else
+    {
+        ui->voltage->setEnabled(true);
+        ui->current->setEnabled(true);
+        ui->power->setEnabled(true);
+        ui->rn->setEnabled(true);
+        ui->dT_button->setEnabled(true);
+        ui->Tcold_button->setEnabled(true);
+        ui->Thot_button->setEnabled(true);
+        ui->dT->setEnabled(true);
+        ui->Tcold->setEnabled(true);
+        ui->Thot->setEnabled(true);
+        ui->alpha->setEnabled(true);
+        ui->rvn->setEnabled(true);
+        ui->couple1->setEnabled(true);
+        ui->couple2->setEnabled(true);
+        ui->dT_button->click();
+        hideTemp();
+        setParamMode();
+        setFindParam();
+    }
+
+}
+
+void MainWindow::setParamMode()
+{
+    ui->statusbar->showMessage(QString::number(ui->param_mode->currentIndex()),2000);
+    ui->couple1->setEnabled(true);
+    ui->couple2->setEnabled(true);
+    ui->alpha->setEnabled(true);
+    ui->rvn->setEnabled(true);
+    if(ui->param_mode->currentIndex() == 1)
+    {
+        ui->alpha->setEnabled(false);
+        ui->rvn->setEnabled(false);
+    }
+    if(ui->param_mode->currentIndex() == 2)
+    {
+        ui->couple1->setEnabled(false);
+        ui->couple2->setEnabled(false);
+    }
+}
+
+void MainWindow::setFindParam()
+{
+    ui->voltage->setEnabled(true);
+    ui->current->setEnabled(true);
+    ui->power->setEnabled(true);
+    ui->rn->setEnabled(true);
+    ui->dT_button->setEnabled(true);
+    ui->dT->setEnabled(true);
+    ui->alpha->setEnabled(true);
+    ui->rvn->setEnabled(true);
+    ui->dT_button->click();
+
+   if(ui->find_param->currentIndex() == 1) ui->voltage->setEnabled(false);
+   if(ui->find_param->currentIndex() == 2) ui->current->setEnabled(false);
+   if(ui->find_param->currentIndex() == 3) ui->power->setEnabled(false);
+   if(ui->find_param->currentIndex() == 4) ui->rn->setEnabled(false);
+   if(ui->find_param->currentIndex() == 5) {
+       if(ui->dT_button->isChecked())
+           ui->Tcold_button->click();
+       ui->dT_button->setEnabled(false);
+       ui->dT->setEnabled(false);
+   }
+   if(ui->find_param->currentIndex() == 6) ui->alpha->setEnabled(false);
+   if(ui->find_param->currentIndex() == 7) ui->rvn->setEnabled(false);
+}
+
+void MainWindow::calculateRvn()
+{
+    set("rvn", get("voltage") / get("current") - get("rn"));
+}
+
+void MainWindow::calculateRn()
+{
+    set("rn", get("voltage") / get("current"));
+}
+
+void MainWindow::calculateVoltage()
+{
+    float m = get("rn") / get("rvn");
+    if(ui->param_mode->currentIndex() == 1)
+    {
+        set("voltage", 2 * (abs(this->currentCouple1.alpha - this->currentCouple2.alpha)) / 1000000 * get("dT") * (m / (1 + m)));
+    }
+    if(ui->param_mode->currentIndex() == 2)
+    {
+        set("voltage", 2 * get("alpha") / 1000000 * get("dT") * (m / (1 + m)));
+    }
+}
+
+void MainWindow::calculateCurrent()
+{
+    set("current", get("voltage") / get("rn"));
+}
+
+void MainWindow::calculatePower()
+{
+    set("power", get("voltage") * get("current"));
+}
+
+void MainWindow::calculateT()
+{
+     set("alpha", get("current") * (get("rvn") + get("rn")) / get("alpha"));
+}
+
+void MainWindow::calculateAlpha()
+{
+    set("alpha", get("current") * (get("rvn") + get("rn")) / get("dT"));
+}
+
+void MainWindow::setCurrentCouple()
+{
+    switch(ui->couple1->currentIndex())
+    {
+        case 0: this->currentCouple1 = alumel; break;
+        case 1: this->currentCouple1 = volfram; break;
+        case 2: this->currentCouple1 = gold; break;
+        case 3: this->currentCouple1 = consta; break;
+        case 4: this->currentCouple1 = kopel; break;
+        case 5: this->currentCouple1 = copper; break;
+        case 6: this->currentCouple1 = molib; break;
+        case 7: this->currentCouple1 = plat; break;
+        case 8: this->currentCouple1 = chromel; break;
+        case 9: this->currentCouple1 = tellur; break;
+    }
+    switch(ui->couple2->currentIndex())
+    {
+        case 0: this->currentCouple2 = alumel; break;
+        case 1: this->currentCouple2 = volfram; break;
+        case 2: this->currentCouple2 = gold; break;
+        case 3: this->currentCouple2 = consta; break;
+        case 4: this->currentCouple2 = kopel; break;
+        case 5: this->currentCouple2 = copper; break;
+        case 6: this->currentCouple2 = molib; break;
+        case 7: this->currentCouple2 = plat; break;
+        case 8: this->currentCouple2 = chromel; break;
+        case 9: this->currentCouple2 = tellur; break;
+    }
+    calculating();
+}
