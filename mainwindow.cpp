@@ -427,3 +427,19 @@ void MainWindow::on_couple2_currentIndexChanged(int index)
     ui->couple2_label->show();
     ui->couple2_label->setText(ui->couple2->currentText());
 }
+
+
+void MainWindow::on_statDone_clicked()
+{
+    ui->stackedWidget_2->setCurrentWidget(ui->setup);
+}
+
+void MainWindow::on_theory_back_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->theory_menu);
+}
+
+void MainWindow::on_history_button_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->history);
+}
