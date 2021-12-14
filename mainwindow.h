@@ -70,6 +70,22 @@ private slots:
     void on_actModeling_triggered();
 
     void on_actAbout_triggered();
+    
+    void on_testSetupDone_clicked();
+
+    void on_questionsDone_clicked();
+
+    void on_voltage_textEdited(const QString &arg1);
+
+    void on_Tcold_textEdited(const QString &arg1);
+
+    void on_Thot_textEdited(const QString &arg1);
+
+    void on_dT_textEdited(const QString &arg1);
+
+    void on_couple1_currentIndexChanged(int index);
+
+    void on_couple2_currentIndexChanged(int index);
 
 private:
     Ui::MainWindow *ui;
