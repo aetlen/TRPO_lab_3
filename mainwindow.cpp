@@ -443,3 +443,24 @@ void MainWindow::on_history_button_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->history);
 }
+
+
+void MainWindow::on_param_mode_currentIndexChanged(int index)
+{
+
+}
+
+void MainWindow::on_find_param_currentIndexChanged(int index)
+{
+
+}
+
+void MainWindow::on_theory_back_2_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->theory_menu);
+}
+
+void MainWindow::on_seebeck_button_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->seebeck_effect);
+}
