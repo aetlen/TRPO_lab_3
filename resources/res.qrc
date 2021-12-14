@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/model">
+        <file>basic.png</file>
+        <file>D:/Загрузки/1200px-Symbol_Thermocouple.svg.ico</file>
+    </qresource>
+</RCC>
