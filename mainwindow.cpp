@@ -328,4 +328,32 @@ void MainWindow::setCurrentCouple()
         case 9: this->currentCouple2 = tellur; break;
     }
     calculating();
+    
+}
+
+
+void MainWindow::calculateTemp()
+{
+    if(!ui->Tcold->isEnabled())
+        set("Tcold", get("Thot") - get("dT"));
+    if(!ui->Thot->isEnabled())
+        set("Thot", get("Tcold") + get("dT"));
+    if(!ui->dT->isEnabled())
+        set("dT", get("Thot") - get("Tcold"));
+}
+
+void MainWindow::hideTemp()
+{
+    if(ui->Thot_button->isChecked())
+        ui->Thot->setEnabled(false);
+    else
+        ui->Thot->setEnabled(true);
+    if(ui->Tcold_button->isChecked())
+        ui->Tcold->setEnabled(false);
+    else
+        ui->Tcold->setEnabled(true);
+    if(ui->dT_button->isChecked())
+        ui->dT->setEnabled(false);
+    else
+        ui->dT->setEnabled(true);
 }
