@@ -92,6 +92,15 @@ private slots:
     void on_theory_back_clicked();
 
     void on_history_button_clicked();
+    
+    
+    void on_param_mode_currentIndexChanged(int index);
+
+    void on_find_param_currentIndexChanged(int index);
+
+    void on_theory_back_2_clicked();
+
+    void on_seebeck_button_clicked();
 
 private:
     Ui::MainWindow *ui;
