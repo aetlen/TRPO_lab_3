@@ -378,3 +378,52 @@ void MainWindow::on_actAbout_triggered()
 {
     ui->stackedMain->setCurrentWidget(ui->about);
 }
+
+
+void MainWindow::on_testSetupDone_clicked()
+{
+    ui->stackedWidget_2->setCurrentWidget(ui->questions);
+}
+
+void MainWindow::on_questionsDone_clicked()
+{
+    ui->stackedWidget_2->setCurrentWidget(ui->stat);
+}
+
+
+void MainWindow::on_voltage_textEdited(const QString &arg1)
+{
+    ui->voltage_label->show();
+    ui->voltage_label->setText(ui->voltage->text());
+}
+
+void MainWindow::on_Tcold_textEdited(const QString &arg1)
+{
+    ui->Tcold_label->show();
+    ui->Tcold_label->setText(ui->Tcold->text());
+}
+
+void MainWindow::on_Thot_textEdited(const QString &arg1)
+{
+    ui->Thot_label->show();
+    ui->Thot_label->setText(ui->Thot->text());
+}
+
+void MainWindow::on_dT_textEdited(const QString &arg1)
+{
+    ui->dT_label->show();
+    ui->dT_label->setText(ui->dT->text());
+}
+
+
+void MainWindow::on_couple1_currentIndexChanged(int index)
+{
+    ui->couple1_label->show();
+    ui->couple1_label->setText(ui->couple1->currentText());
+}
+
+void MainWindow::on_couple2_currentIndexChanged(int index)
+{
+    ui->couple2_label->show();
+    ui->couple2_label->setText(ui->couple2->currentText());
+}
