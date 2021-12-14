@@ -58,6 +58,10 @@ private slots:
     void calculateAlpha();
 
     void setCurrentCouple();
+    
+    void calculateTemp();
+
+    void hideTemp();
 
 private:
     Ui::MainWindow *ui;
