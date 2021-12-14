@@ -86,6 +86,12 @@ private slots:
     void on_couple1_currentIndexChanged(int index);
 
     void on_couple2_currentIndexChanged(int index);
+    
+    void on_statDone_clicked();
+
+    void on_theory_back_clicked();
+
+    void on_history_button_clicked();
 
 private:
     Ui::MainWindow *ui;
